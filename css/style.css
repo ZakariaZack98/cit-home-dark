@@ -1,0 +1,1439 @@
+/* ========Common CSS========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
+    color: white;
+}
+body {
+    background-color: #191919;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+ul, li {
+    list-style: none;
+}
+.container {
+    width: 1520px;
+    margin: 0 auto;
+}
+.regularbtn {
+    padding: 1em 3em;
+    border: none;
+    background-image: linear-gradient(to right, #FF1E1E, #FF736D);
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+}
+.regularbtn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    background-image: linear-gradient(to right, #F6931D, #f1be80);
+    left: 0;
+    top: 0;
+    z-index: -2;
+    transition: 0.2s ease;
+}
+.regularbtn:hover::before {
+    width: 100%;
+}
+.smallbtn {
+    padding: 0.5em 4em;
+    border: none;
+    background-color: #C9567B;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.smallbtn:hover {
+    scale: 1.05;
+    box-shadow: 0 20px 6px 6px rgba(0, 0, 0, 0.082);
+}
+
+/* =========Typography CSS======= */
+.regularHeader {
+    font-size: 64px;
+    font-weight: 700;
+}
+.regularText {
+    font-size: 20px;
+    margin: 16px, 0;
+}
+.regularBold {
+    font-size: 20px;
+    font-weight: 700;
+}
+.boldHeader {
+    font-size: 96px;
+    font-weight: 900;
+    letter-spacing: 14px;
+    color: #FF1E1E;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+}
+.shadowheader {
+    font-family: "Rethink Sans";
+    font-size: 400px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.041);
+    text-wrap: nowrap;
+    line-height: 120%;
+    transition: 0.5s ease;
+}
+.courses:hover .shadowheader{
+    scale: 0.5;
+    transform: translateX(-50%);
+}
+/* =========Navbar CSS============ */
+.navbar {
+    height: 0px;
+}
+.menuButton {
+    display: none;
+}
+.navbarWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+}
+.navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.navLinks ul {
+    display: flex;
+}
+.navLinks ul li a {
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 40px;
+}
+.navLinks ul li {
+    padding: 1rem 0.5rem;
+    position: relative;
+    cursor: pointer;
+}
+.navLinks ul li::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 100%;
+    background-image: linear-gradient(to right, #FF1E1E, #FF736D);
+    transition: 0.2s ease-in-out;
+}
+.navLinks ul li:hover::before {
+    width: 80%;
+    height: 3px;
+}
+/* =======Banner CSS============ */
+.banner{
+    height: 100vh;
+    background-image: url(../images/banner-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+.bannerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bannerTextarea span{
+    display: inline-block;
+    margin-left: 1rem;
+}
+.bannerTextarea h1 {
+    font-size: 60px;
+    font-weight: 300;
+    margin: 17px 0;
+}
+.bannerTextarea .color {
+    font-weight: 600;
+    color: #FF1E1E;
+}
+.bannerTextarea button {
+    margin: 32px 0;
+}
+.bannerbtn {
+    display: flex;
+    gap: 5%;
+}
+.videobutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.videobutton img {
+    height: 65px;
+    width: 65px;
+}
+.bannerRight {
+    width: 50%;
+}
+.bannerTextarea{
+    margin-top: 15%;
+}
+.iso {
+    display: flex;
+    gap: 3%;
+    margin: 20px 0;
+}
+.iso img {
+    height: 68px;
+    width: 68px;
+}
+.bannerRight img {
+    height: 962px;
+    width: 962px;
+    transform: translate(10%, 13%);
+}
+/* ============Social CSS ======*/
+.socialWrap {
+    border-top: 1px solid rgba(255, 0, 0, 0.733);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0 4rem;
+}
+.socialbtnWrap img{
+    height: 40px;
+    width: 40px;
+    transition: 0.2s ease;
+}
+.socialbtnWrap a:hover img {
+    transform: translateY(-10px);
+}
+.socialWrap i {
+    margin-left: 2rem;
+}
+.socialfixed {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: -3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1.5rem 1.5rem;
+    background-image: linear-gradient(to bottom, #ff1e1e7a, #ff726d81);
+    border-radius: 20px;
+    z-index: 999;
+}
+.socialfixed img{
+    height: 50px;
+    width: 50px;
+    transition: 0.2s ease;
+}
+.socialfixed a {
+    margin: 0.7rem 0 0 0.3rem;
+    transition: 0.2s ease;
+    transform: translateX(30px);
+}
+.socialfixed a:hover {
+    transform: translateX(50px);
+}
+/* ============Intro CSS=========== */
+.intro {
+    background-image: url(../images/video-bg.gif);
+    background-size: cover;
+    background-position: center;
+}
+.shader {
+    background-color: rgba(0, 0, 0, 0.808);
+}
+.introWrapper {
+    padding: 8rem 0;
+}
+.introWrapper h1, .skillsWrapper h1 {
+    font-size: 64px;
+    font-weight: 300;
+    color: #FF1E1E;
+    margin: 2rem 0;
+    text-align: center;
+}
+.introWrapper p, .skillsWrapper p {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.ytvideo {
+    height: 500px;
+    width: 863px;
+    border: 6px solid #7c1d1d;
+    border-radius: 50px;
+    margin: 4rem auto;
+    overflow: hidden;
+}
+.ytvideo iframe {
+    height: 500px;
+    width: 863px;
+}
+/* ============Skills CSS============= */
+.skills {
+    height: 1920px;
+    background-image: url(../images/body-bg1.png);
+    background-size: cover;
+    background-position: center;
+}
+.skillsWrapper {
+    padding-top: 200px;
+}
+.skillCardWrap{
+    margin: 100px 150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.skillcard {
+    width: 364px;
+    height: 446px;
+    padding: 0.5rem;
+    margin: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.247);
+    border: 6px solid #c9567a4b;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.skillcard:hover {
+    scale: 1.1;
+}
+.skillcard h2 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.skillcard p {
+    font-size: 16px;
+    width: 85%;
+    margin: 5px 0;
+}
+.wd:hover {
+    border: 6px solid #C9567B;
+    box-shadow: 0 0 10px 10px #c9567a57;
+}
+.wd:hover .icon {
+    border: 5px solid #C9567B;
+}
+.icon {
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    background-color: #c9567a4d;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.dm {
+    border: 6px solid #aa47bc4b;
+}
+.dm .icon {
+    background-color: #aa47bc4b;
+}
+.dm .smallbtn {
+    background-color: #AA47BC;
+}
+.dm:hover {
+    border: 6px solid #AA47BC;
+    box-shadow: 0 0 10px 10px #aa47bc5b;
+}
+.dm:hover .icon{
+    border: 5px solid #AA47BC;
+}
+.gd {
+    border: 6px solid #e6383542
+}
+.gd .icon {
+    background-color: #e6383542;
+}
+.gd .smallbtn {
+    background-color: #E63835;
+}
+.gd:hover {
+    border: 6px solid #E63835;
+    box-shadow: 0 0 10px 10px #e6383556;
+}
+.gd:hover .icon{
+    border: 5px solid #E63835;
+}
+.lg {
+    border: 6px solid #f6941d41
+}
+.lg .icon {
+    background-color: #f6941d46;
+}
+.lg .smallbtn {
+    background-color: #F6931D;
+}
+.lg:hover {
+    border: 6px solid #F6931D;
+    box-shadow: 0 0 10px 10px #f6941d57;
+}
+.lg:hover .icon{
+    border: 5px solid #F6931D;
+}
+.net {
+    border: 6px solid #7985cc48
+}
+.net .icon {
+    background-color: #7985cc46;
+}
+.net .smallbtn {
+    background-color: #7986CC;
+}
+.net:hover {
+    border: 6px solid #7986CC;
+    box-shadow: 0 0 10px 10px #7985cc63;
+}
+.net:hover .icon{
+    border: 5px solid #7986CC;
+}
+.cy {
+    border: 6px solid #0063af4b
+}
+.cy .icon {
+    background-color: #0063af41;
+}
+.cy .smallbtn {
+    background-color: #0062AF;
+}
+.cy:hover {
+    border: 6px solid #0062AF;
+    box-shadow: 0 0 10px 10px #0063af60;
+}
+.cy:hover .icon{
+    border: 5px solid #0062AF;
+}
+.see-more {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -50px;
+}
+/* ==========Success CSS======== */
+.success {
+    position: relative;
+    background-image: url(../images/body-bg1.png);
+    background-size: cover;
+}
+.success:hover h1{
+    scale: 1.3;
+}
+.success h1 {
+    font-size: 96px;
+    letter-spacing: 18px;
+    color: #FF1E1E;
+    rotate: 90deg;
+    position: absolute;
+    left: -25%;
+    top: 50%;
+    transition: 0.7s ease;
+}
+.success iframe {
+    border: 5px solid #ff1e1e7e;
+    border-radius: 30px;
+}
+.dupe {
+    display: none;
+}
+.framewrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3rem;
+    column-gap: 3rem;
+}
+/*===========Courses CSS========== */
+.courses {
+    position: relative;
+}
+.courses .boldHeader {
+    margin-top: 210px;
+}
+.courseRow{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+/* .courseRow:hover .third h1{
+    scale: 0.2;
+    transition: 0.5 ease-in;
+} */
+.courseCard {
+    width: 462px;
+    height: 475px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.123);
+    overflow: hidden;
+    border: 6px solid #FF1E1E;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.courseCard:hover {
+    box-shadow: 0 0 20px 20px rgba(255, 0, 0, 0.26);
+}
+.courseCard:hover .topPart img{
+    scale: 1.2;
+}
+.topPart{
+    width: 100%;
+    height: 54%;
+    overflow: hidden;
+}
+.topPart img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in;
+}
+.shadowheader:hover{
+    scale: 0.5;
+}
+.bottomPart {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardSubheader {
+    font-size: 1.2rem;
+    color: #DF6812;
+    font-weight: 600;
+}
+.cardHeader {
+    font-size: 20px;
+    margin: 5px 0;
+}
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+.ratings span {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.459);
+}
+.stars i{
+    color: #DF6812;
+}
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price button {
+    font-size: 1rem;
+    border: none;
+    background-color: #DF6812;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+.price button:hover{
+    background-color: #b3520d;
+
+}
+.nextbutton {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 5px solid red;
+    right: 0;
+    top: 50%;
+    transform: translate(130px, -50%);
+    transition: 0.3s ease-in-out;
+}
+.nextbutton i{
+    text-align: center;
+    line-height: 70px;
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+}
+.nextbutton:hover {
+    background-color: red;
+}
+.nextbutton:hover i {
+    color: black;
+}
+.courses-row-2 {
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+/* .courseRow2 {
+    transform: translateY(-100px);
+} */
+.allcourse {
+    left: 45%;
+    transform: translateY(5rem);
+}
+.courses .shadowheader {
+    line-height: 60%;
+}
+/* ===========Seminar CSS========= */
+.seminar {
+    background-image: url(../images/body-bg1.png);
+    background-size: cover;
+}
+.seminarText {
+    padding: 486px 10px 107px 10px;
+}
+.seminarWrapper:hover .seminarText {
+    background-image: linear-gradient(to right, #ff1e1e4f, #ff726d56);
+    transition: 0.3s ease-in-out;
+}
+.seminarText h1 {
+    margin: 4rem 0;
+    text-shadow: 0px 0px 10px black;
+}
+.seminarWrapper {
+    background-image: url(/images/seminar1710745757.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 300px 100px;
+}
+/* ==========Mentors CSS========== */
+.mentors {
+    background-image: url(../images/gradient-wave-colorful-design-minimalist-style_483537-3753.avif);
+    background-size: cover;
+    background-position: center;
+}
+.mentorshader {
+    background-color: rgba(77, 77, 77, 0.342);
+}
+.mentorMasterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20%;
+    padding: 200px 0;
+}
+.mentorsWrap2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mentorsleft {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+.mentortext {
+    width: 600px;
+    height: 300px;
+    padding: 1rem;
+}
+.mentortext h1 {
+    font-size: 60px;
+    color: red;
+}
+.mentortext p {
+    margin: 1rem 0;
+}
+.mentor img {
+    width: 300px;
+    height: 300px;
+}
+.mentorpic img {
+    width: 300px;
+    height: 300px;
+}
+/* ==============footer css====== */
+#footer {
+    background-image: url(../images/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+.admissionWrapper {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 15rem 4rem 6rem 4rem;
+}
+.admission p {
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.692);
+    width: 55%;
+    margin: 0 auto;
+}
+.adm-header {
+    font-size: 80px;
+}
+.admission button {
+    padding: 0.7em 3em;
+    border: 3px solid red;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 1rem 2rem;
+    transition: 0.3s ease-in;
+}
+.admission button:hover {
+    background-color: red;
+    color: black;
+}
+.footerlinksWrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 5%;
+    padding-bottom: 4rem;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 40%;
+}
+.officeTxt {
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.747);
+    line-height: 40px;
+}
+.sec {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.icon-small {
+    font-size: 1.5rem;
+    width: 54px;
+    height: 54px;
+}
+.quicklinks a {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.747);
+    line-height: 40px;
+}
+.contacts {
+    width: 30%;
+}
+.quicklinks a:hover {
+    opacity: 0.7;
+}
+.quicklinks h2 {
+    margin: 2rem 0;
+}
+.merchantWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 2rem;
+    margin: 4rem 0;
+}
+.payment {
+    margin: 10rem 0;
+}
+.payment h1 {
+    text-align: center;
+}
+.merchantCard {
+    padding: 2rem 4rem;
+    background-color: rgba(255, 255, 255, 0.171);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 1rem;
+}
+.bkash {
+    padding-bottom: 3rem;
+}
+.ssl {
+    padding-top: 3.3rem;
+}
+.socialWrap {
+    border-top: 1px solid rgba(255, 0, 0, 0.733);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0 4rem;
+}
+.socialbtnWrap img{
+    height: 40px;
+    width: 40px;
+    transition: 0.2s ease;
+}
+.socialbtnWrap a:hover img {
+    transform: translateY(-10px);
+}
+.socialWrap i {
+    margin-left: 2rem;
+}
+.socialfixed {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: -3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1.5rem 1.5rem;
+    background-image: linear-gradient(to bottom, #ff1e1e7a, #ff726d81);
+    border-radius: 20px;
+    z-index: 999;
+}
+.socialfixed img{
+    height: 50px;
+    width: 50px;
+    transition: 0.2s ease;
+}
+.socialfixed a {
+    margin: 0.7rem 0 0 0.3rem;
+    transition: 0.2s ease;
+    transform: translateX(30px);
+}
+.socialfixed a:hover {
+    transform: translateX(50px);
+}
+/* Media Queries============== */
+@media (max-width: 1400px) {
+    .container {
+        width: 80%;
+    }
+    .regularText {
+        font-size: 1rem;
+    }
+    .regularbtn {
+        padding: 0.7em 2em;
+        border: none;
+        background-image: linear-gradient(to right, #FF1E1E, #FF736D);
+        font-size: 1rem;
+        font-weight: 600;
+        position: relative;
+        z-index: 0;
+    }
+    .regularHeader {
+        font-size: 40px;
+    }
+    .regularBold {
+        font-size: 1rem;
+    }
+    .boldHeader {
+        font-size: 64px;
+        font-weight: 900;
+        letter-spacing: 12px;
+        color: #FF1E1E;
+        text-transform: uppercase;
+        margin: 0.3rem 0;
+    }
+    .shadowheader {
+        font-size: 250px;
+        transform: translate(-500px,80px);
+    }
+    /* Socials=================== */
+    .socialfixed {
+        left: -1.7rem;
+        scale: 0.7;
+        top: 45%;
+    }
+    /* Navbar==================== */
+    .navbarWrapper {
+        padding: 10px;
+        padding-top: 8px;
+    }
+    .logo{
+        scale: 0.7;
+    }
+    .navbar .container {
+        width: 90%;
+    }
+    .navbar ul li a {
+        font-size: 1rem;
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+    .navbar button {
+        font-size: 1rem;
+    }
+    /* Bannner================= */
+    .bannerTextarea {
+        margin-top: 20%;
+    }
+    .bannerTextarea h1 {
+        font-size: 40px;
+        margin: 12px 0;
+    }
+    .bannerRight img {
+        height: 650px;
+        width: 600px;
+        object-position: center;
+        object-fit: contain;
+    }
+    .iso {
+        margin: 0;
+    }
+    .iso img {
+        scale: 0.7;
+        transform: translateY(-10px);
+    }
+    /* Intro===================== */
+    .ytvideo {
+        height: 380px;
+        width: 600px;
+        border: none;
+    }
+    .ytvideo iframe{
+        height: 380px;
+        width: 580px;
+        margin: 0 0 0 1rem;
+        border: 6px solid #7c1d1d;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+    .introWrapper h1 {
+        margin: 0;
+    }
+    .introWrapper {
+        padding: 2rem 0;
+    }
+    /* skills=================== */
+    .skills {
+        background-size: contain;
+    }
+    .skillCardWrap {
+        margin: -4rem 0;
+        scale: 0.8;
+    }
+    .skillsWrapper h1 {
+        font-size: 3rem;
+    }
+    .skillcard h2 {
+        font-size: 24px;
+    }
+    .skillcard {
+        width: 30%;
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+    /* Success================== */
+
+    .success{
+        margin-top: -400px;
+    }
+    .success h1 {
+        position: inherit;
+        rotate: 0deg;
+        text-wrap: nowrap;
+        font-size: 200px;
+        transform: translateX(-44%);
+        rotate: 15deg;
+        opacity: 0.1;
+    }
+    .success:hover h1{
+        scale: 0.5;
+        rotate: 0deg;
+        opacity: 1;
+    }
+    .success iframe {
+        height: 267px;
+        width: 474px;
+    }
+    .framewrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        column-gap: 5%;
+    }
+    /* Courses==================== */
+    .courses .shadowheader {
+        line-height: 70%;
+        transform: translateY(-50px);
+    }
+    .courseCard {
+        width: 320px;
+        height: 370px;
+        padding-bottom: 1rem;
+        border: 4px solid rgb(150, 17, 17);
+        border-radius: 13px;
+    }
+    .bottomPart {
+        padding: 1rem;
+    }
+    .price {
+        padding-bottom: 1rem;
+    }
+    .cardSubheader {
+        font-size: 0.8rem;
+    }
+    .cardHeader {
+        font-size: 1rem;
+        margin: 0;
+    }
+    .ratings span {
+        font-size: 0.8rem;
+    }
+    .price button {
+        font-size: 0.8rem;
+        border-radius: 3px;
+        padding: 5px 11px;
+    }
+    .ratings {
+        margin: 0;
+    }
+    .nextbutton {
+        height: 50px;
+        width: 50px;
+        border: 3px solid red;
+    }
+    .nextbutton{
+        transform: translate(80px, -50%);
+    }
+    .nextbutton i {
+        line-height: 45px;
+        font-size: 1.4rem;
+    }
+    .allcourse {
+        left: 45%;
+    }
+    /* Seminar============== */
+    .seminarWrapper {
+        border: 10px solid red;
+        margin: 100px 100px;
+    }
+    .seminarText {
+        padding: 226px 0 70px 0;
+    }
+    .seminarText h1 {
+        margin: 2rem 0;
+    }
+    /* Mentors=============== */
+    .mentor img {
+        width: 200px;
+        height: 200px;
+    }
+    .mentortext {
+        width: 400px;
+        height: 200px;
+        padding: 0 0 1rem 1rem;
+    }
+    .mentortext h1 {
+        font-size: 36px;
+        color: red;
+    }
+    .mentortext p {
+        margin: 0.7rem 0;
+        font-size: 0.8rem;
+
+    }
+    .mentorpic img {
+        width: 200px;
+        height: 200px;
+    }
+    .mentorsleft {
+        width: 400px;
+    }
+    /* footer================ */
+    #footer {
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(-100px);
+    }
+    .admission p {
+        font-size: 18px;
+    }
+    .admission h1 {
+        font-size: 48px;
+    }
+    .admission button {
+        font-size: 18px;
+        margin: 0 1.3rem;
+    }
+    .sec {
+        gap: 1.3rem;
+        margin: 1.3rem 0;
+    }
+    .officeTxt {
+        font-size: 0.8rem;
+    }
+    .contacts {
+        font-size: 1rem;
+    }
+    .icon-small {
+        font-size: 1rem;
+        width: 3px;
+        height: 34px;
+        width: 34px;
+    }
+    .quicklinks a {
+        font-size: 0.8rem;
+    }
+    .quicklinks h2 {
+        margin: 1.4rem 0;
+    }
+    .merchantWrapper {
+        gap: 1.3rem;
+        margin: 2.8rem 0;
+    }
+    .merchantCard {
+        padding: 1.3rem 2.8rem;
+    }
+    .payment {
+        margin: 5rem 0;
+    }
+    .payment h1 {
+        font-size: 20px;
+    }
+    .payment img {
+        width: 80%;
+    }
+    .ssl img {
+        padding-top: 1rem;
+        width: 70%;
+    }
+    .socialfixed {
+        top: 40%;
+    }
+    .socialbtnWrap img {
+        height: 30px;
+        width: 30px;
+    }
+    .socialWrap p {
+        font-size: 0.8rem;
+    }
+    .socialWrap img {
+        scale: 0.7;
+    }
+    .socialfixed {
+        left: -2.5rem;
+    }
+    .socialWrap {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        overflow: hidden;
+    }
+    .regularbtn {
+        padding: 1em 3em;
+        border: none;
+        background-image: linear-gradient(to right, #FF1E1E, #FF736D);
+        font-size: 12px;
+        font-weight: 600;
+        position: relative;
+        z-index: 0;
+    }
+    .regularBold {
+        font-size: 12px;
+    }
+    .regularText {
+        font-size: 0.8rem;
+    }
+    .shadowheader {
+        display: none;
+    }
+    /* Navbar====================== */
+    .navbar {
+        height: 80px;
+        background-color: #191919;
+        box-shadow: 0 1px 1px 1px rgba(255, 0, 0, 0.527);
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+    }
+    .container {
+        width: 95%;
+    }
+    .navLinks {
+        display: none;
+    }
+    .menuButton {
+        display: block;
+        padding: 10px;
+        font-size: 2rem;
+    }
+    /* Banner */
+    .banner {
+        background-size: contain;
+        background-position: top;
+        overflow-x: hidden;
+        height: fit-content;
+    }
+    .bannerLeft {
+        padding-top: 2rem;
+    }
+    .bannerWrapper {
+        display: block;
+    }
+    .banner h1 {
+        font-size: 28px;
+        width: 110%;
+    }
+    .check {
+        scale: 0.7;
+        transform: translateY(10px);
+    }
+    .regularText {
+        font-size: 0.8rem;
+    }
+    .socialfixed {
+        display: none;
+    }
+    .videobutton img {
+        height: 35px;
+        width: 35px;
+    }
+    .iso img {
+        height: 40px;
+        width: 40px;
+        transform: translateY(2px);
+    }
+    .bannerRight {
+        width: 90%;
+        transform: translateX(-5%);
+    }
+    .bannerRight img {
+        height: 100%;
+        width: 100%;
+    }
+    /* Intro===================== */
+    .introWrapper h1 {
+        font-size: 30px;
+    }
+    .introWrapper {
+        padding-top: 2rem;
+        display: block;
+    }
+    .introWrapper p {
+        width: 100%;
+    }
+    .ytvideo {
+        height: 180px;
+        width: 340px;
+        border: none;
+        border-radius: 10px;
+    }
+    .ytvideo iframe{
+        height: 180px;
+        width: 340px;
+        margin: 0;
+        border: none;
+        border-radius: 10px;
+        overflow: visible;
+        border: 3px solid rgb(146, 14, 14);
+        transform: translateX(-20px);
+    }
+    /* skills================= */
+    .skills {
+        height: fit-content;
+        overflow: hidden;
+    }
+    .skillsWrapper {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .skillsWrapper h1 {
+        font-size: 2rem;
+    }
+    .skillsWrapper p {
+        width: 100%;
+    }
+    .skillCardWrap {
+        margin: 0;
+        padding: 0;
+        height: fit-content;
+        transform: translateY(-300px);
+    }
+    .see-more {
+        transform: translate(-65px, -500px);
+        margin: 0;
+    }
+    .skillcard {
+        width: 100%;
+    }
+    /* Success================== */
+    .success h1{
+        display: none;
+    }
+    .success iframe {
+        height: 180px;
+        width: 340px;
+    }
+    .successWrapper {
+        display: block;
+        transform: translateY(0);
+        padding: 2rem 0 0 0;
+    }
+    .dupe {
+        display: block;
+        font-size: 64px;
+        font-weight: 900;
+        color: red;
+        line-height: 95%;
+        letter-spacing: 5px;
+        text-align: center;
+        transform: translateY(-20px);
+    }
+    .verticalline {
+        display: none;
+    }
+    .success iframe {
+        border-radius: 20px;
+    }
+    /* Courses================= */
+    .courses .boldHeader {
+        letter-spacing: normal;
+        text-align: center;
+        line-height: 80%;
+        margin-bottom: 2rem;
+    }
+    .courseRow {
+        transform: translate(0, 0);
+        padding-bottom: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nextbutton {
+        display: none;
+    }
+    .allcourse {
+        transform: translateY(0px);
+        left: 32%;
+    }
+    /* Seminar=============== */
+    .seminarWrapper {
+        border: 4px solid rgba(255, 0, 0, 0.438);
+        margin: 5rem 0;
+    }
+    .seminarText {
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 116px 0 50px 0;
+    }
+    .seminarText h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+    /* mentors================= */
+    .mentorMasterWrap {
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+    }
+    .mentorMasterWrap img {
+        width: 180px;
+        height: 180px;
+    }
+    .mentorsleft {
+        justify-content: center;
+        align-items: center;
+    }
+    /* footer================== */
+    #footer {
+        transform: translateY(0);
+        background-repeat: repeat;
+        background-size: contain;
+        overflow: hidden;
+    }
+    .admissionWrapper {
+        padding: 0;
+        width: 100%;
+        margin: 3rem 0 6rem;
+    }
+    .admission h1 {
+        font-size: 32px;
+    }
+    .admission p {
+        font-size: 14px;
+        width: 100%;
+    }
+    .admission button {
+        font-size: 14px;
+        margin: 0 1.3rem;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .footerlinksWrapper {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .contacts {
+        width: 50%;
+        justify-content: center;
+    }
+    .sec {
+        gap: 10px;
+    }
+    .contacts .icon {
+        display: none;
+    }
+    .officeTxt {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+    .quicklinks {
+        width: 45%;
+    }
+    .quicklinks ul li a {
+        line-height: 1rem;
+    }
+    .quicklinks h2 {
+        font-size: 20px;
+    }
+    .others {
+        margin-left: 1rem;
+    }
+    .merchantWrapper {
+        flex-wrap: wrap;
+    }
+    .payment h1 {
+        font-size: 1rem;
+    }
+    .merchantCard {
+        width: 40%;
+    }
+    .socialWrap {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .bottomlogo {
+        scale: 0.7;
+    }
+    .socialbtnWrap {
+        scale: 1.2;
+        margin: 1rem;
+    }
+}
